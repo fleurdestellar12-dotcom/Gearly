@@ -3,42 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulir Penyewaan - Gearly</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Gearly</h1>
+        <div class="header-container">
+            <h1>Gearly</h1>
+        </div>
         <nav>
-            <a href="index.html">Katalog Utama</a> | 
-            <a href="detail.html">Detail Perangkat</a>
+            <ul class="nav-list">
+                <li><a href="index.html">Katalog Utama</a></li>
+                <!-- Class active dipasang di halaman formulir -->
+                <li><a href="sewa.html" class="active">Formulir Penyewaan</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <h2>Formulir Pengajuan Sewa</h2>
-        <p>Silakan lengkapi formulir di bawah ini untuk mengajukan penyewaan perangkat.</p>
+    <main class="form-container">
+        <h2 class="section-title">Formulir Pengajuan Sewa</h2>
+        <p class="text-center">Silakan lengkapi formulir di bawah ini untuk mengajukan penyewaan perangkat.</p>
         
-        <form action="#" method="POST">
-            <label for="namaLengkap">Nama Lengkap:</label><br>
-            <input type="text" id="namaLengkap" name="namaLengkap"><br><br>
+        <form action="#" method="POST" class="styled-form">
+            <div class="form-group">
+                <label for="namaLengkap">Nama Lengkap:</label>
+                <input type="text" id="namaLengkap" name="namaLengkap" required>
+            </div>
 
-            <label for="pilihanPerangkat">Perangkat yang Disewa:</label><br>
-            <select id="pilihanPerangkat" name="pilihanPerangkat">
-                <option value="kamera">Kamera Digital Profesional</option>
-                <option value="racing_wheel">Racing Wheel Simulator</option>
-            </select><br><br>
+            <!-- Field Tambahan -->
+            <div class="form-group">
+                <label for="noHp">Nomor HP:</label>
+                <input type="tel" id="noHp" name="noHp" placeholder="Contoh: 08123456789" required>
+            </div>
 
-            <label for="durasiSewa">Durasi Sewa (Hari):</label><br>
-            <input type="number" id="durasiSewa" name="durasiSewa" min="1"><br><br>
+            <div class="form-group">
+                <label for="noKtp">Nomor KTP:</label>
+                <input type="number" id="noKtp" name="noKtp" placeholder="16 Digit NIK" required>
+            </div>
 
-            <label for="catatanTambahan">Catatan / Tujuan Penggunaan:</label><br>
-            <textarea id="catatanTambahan" name="catatanTambahan" rows="4" cols="40"></textarea><br><br>
+            <div class="form-group">
+                <label for="nim">NIM (Jika Ada):</label>
+                <input type="text" id="nim" name="nim" placeholder="Contoh: 10302240005">
+            </div>
+            <!-- Akhir Field Tambahan -->
 
-            <input type="submit" value="Kirim Pengajuan Sewa">
+            <div class="form-group">
+                <label for="pilihanPerangkat">Perangkat yang Disewa:</label>
+                <select id="pilihanPerangkat" name="pilihanPerangkat">
+                    <option value="kamera">Kamera Digital Profesional</option>
+                    <option value="racing_wheel">Racing Wheel Simulator</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="durasiSewa">Durasi Sewa (Hari):</label>
+                <input type="number" id="durasiSewa" name="durasiSewa" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="catatanTambahan">Catatan / Tujuan Penggunaan:</label>
+                <textarea id="catatanTambahan" name="catatanTambahan" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Kirim Pengajuan Sewa</button>
         </form>
     </main>
 
     <footer>
-        <p>Dibuat oleh: I Made Radithya Kusuma Wardana (10302240005)</p>
+        <p>Dibuat oleh: <span class="author-name">I Made Radithya Kusuma Wardana (10302240005)</span></p>
     </footer>
 </body>
 </html>

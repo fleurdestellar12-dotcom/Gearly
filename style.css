@@ -1,0 +1,196 @@
+/* Pengaturan Warna & Font Dasar */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+}
+
+/* Penggunaan Span */
+.author-name {
+    font-weight: bold;
+    color: #1d5290;
+}
+
+/* Header & Alignment Teks */
+header {
+    background-color: #ffffff;
+    border-bottom: 3px solid #1d5290;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #1d5290;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Pembungkus menu (agar ke samping dan ada jarak) */
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex; /* Ini yang membuat menu berbaris ke samping */
+    justify-content: center; /* Menengahkan menu */
+    gap: 20px; /* Jarak antar menu agar tidak overlap */
+}
+
+/* Tampilan tombol menu */
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 2px solid #333333; 
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    display: inline-block; /* Memastikan padding dan border terbentuk sempurna */
+}
+
+/* Warna saat halaman aktif */
+.nav-list li a.active {
+    border-color: #1d5290; 
+    color: #1d5290;
+}
+
+/* Warna saat di-hover */
+.nav-list li a:hover {
+    background-color: #1d5290;
+    color: #ffffff;
+    border-color: #1d5290;
+}
+
+/* Layout Main & Div */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8em;
+    color: #1d5290;
+    margin-bottom: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Katalog Box (Penggunaan div untuk grouping) */
+.katalog-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0873d9;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1d5290;
+}
+
+/* Detail & Form Layout */
+.detail-container, .form-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.styled-table th {
+    background-color: #1d5290;
+    color: white;
+    text-align: left;
+}
+
+/* Styling Form */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.btn-submit {
+    width: 100%;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    color: #666;
+}
+
+/* @Media Query - Responsive Dasar */
+@media (max-width: 600px) {
+    /* Navigasi berubah dari horizontal ke vertikal */
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Card turun ke bawah di layar HP */
+    .katalog-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
